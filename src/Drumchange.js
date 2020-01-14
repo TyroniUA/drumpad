@@ -13,53 +13,71 @@ const data =[
   { id: 'laser', letter: 'C', src: 'http://www.sa-matra.net/sounds/starcontrol/Umgah-Backzip.wav', ref: React.createRef()  },
 ]
 
-class DrumChange extends React.Component{
-   componentDidMount(){
-     console.log(this.audio)
-     document.addEventListener('keydown', this.handlePress)
-   }
-componentWillUnmount(){
-  document.removeEventListener('keydown', this.handleKeyDown)
-}
-    handlePress = event => {
+class DrumChange extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: 'Click to play'
+    }
+  }
+
+  handleDisplay = display => this.setState({display})
+
+  componentDidMount() {
+    console.log(this.audio)
+    document.addEventListener('keydown', this.handlePress)
+  }
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyDown)
+  }
+  handlePress = e => {
+
+    const audio = document.getElementById(e.key.toUpperCase());
+    if (audio) {
       
-      if(event.keyCode === 83){
-        console.log(event.key)
-      }
+      audio.play();
+      console.log(audio.tag)
+      audio.currentTime = 0;
+      this.handleDisplay(audio.text)
     }
+  }
 
 
-    handleClick =(e) => {
-        console.log('playing')
-        const target = e.target.firstChild;
-        target.play();
-        target.currentTime =0;
-        
-    }
+  handleClick = (e) => {
+    console.log('playing')
+    const target = e.target.firstChild;
+    target.play();
+    target.currentTime = 0;
+    this.handleDisplay(e.target.id)
+
+  }
 
   render() {
-    
+
     console.log(this.arr);
-    
+
     return (
       <container id='drum-machine' >
-        
+
         <container id='display'>
           Showing string of playable audio
+          <div>{this.state.display}</div>
         </container>
-       <div >
-         {data.map((d, index) => <button className='drum-pad' 
-         id={d.id} 
-         key={d.id} 
-         letter={d.letter}
-         onClick={e => this.handleClick(e)}
-         >
-           <audio className='clip' 
-           id={d.letter} 
-           src={d.src} 
-           ref={d.ref} />
-         {d.letter} </button> )}
-       </div>
+        <div >
+          {data.map((d, index) => <button className='drum-pad'
+            id={d.id}
+            key={d.id}
+            letter={d.letter}
+            onClick={e => this.handleClick(e)}
+          >
+            <audio className='clip'
+              id={d.letter}
+              tag={d.id}
+              src={d.src}
+              ref={d.ref} />
+              
+            {d.letter} </button>)}
+        </div>
 
       </container>
     )
