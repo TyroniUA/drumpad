@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/DrumMachine/static/css/main.f7042014.chunk.css",
-    "main.js": "/DrumMachine/static/js/main.ad81901e.chunk.js",
-    "main.js.map": "/DrumMachine/static/js/main.ad81901e.chunk.js.map",
-    "runtime-main.js": "/DrumMachine/static/js/runtime-main.8c935c80.js",
-    "runtime-main.js.map": "/DrumMachine/static/js/runtime-main.8c935c80.js.map",
-    "static/js/2.efcfc1fa.chunk.js": "/DrumMachine/static/js/2.efcfc1fa.chunk.js",
-    "static/js/2.efcfc1fa.chunk.js.map": "/DrumMachine/static/js/2.efcfc1fa.chunk.js.map",
-    "index.html": "/DrumMachine/index.html",
-    "precache-manifest.a2ac8052b0889508cb70fb84446918fe.js": "/DrumMachine/precache-manifest.a2ac8052b0889508cb70fb84446918fe.js",
-    "service-worker.js": "/DrumMachine/service-worker.js",
-    "static/css/main.f7042014.chunk.css.map": "/DrumMachine/static/css/main.f7042014.chunk.css.map",
-    "static/js/2.efcfc1fa.chunk.js.LICENSE": "/DrumMachine/static/js/2.efcfc1fa.chunk.js.LICENSE"
+    "main.css": "/Drumpad/static/css/main.f7042014.chunk.css",
+    "main.js": "/Drumpad/static/js/main.bdd3d74d.chunk.js",
+    "main.js.map": "/Drumpad/static/js/main.bdd3d74d.chunk.js.map",
+    "runtime-main.js": "/Drumpad/static/js/runtime-main.7e49beba.js",
+    "runtime-main.js.map": "/Drumpad/static/js/runtime-main.7e49beba.js.map",
+    "static/js/2.efcfc1fa.chunk.js": "/Drumpad/static/js/2.efcfc1fa.chunk.js",
+    "static/js/2.efcfc1fa.chunk.js.map": "/Drumpad/static/js/2.efcfc1fa.chunk.js.map",
+    "index.html": "/Drumpad/index.html",
+    "precache-manifest.3c01cdd00bf92384f1a465456c63aebf.js": "/Drumpad/precache-manifest.3c01cdd00bf92384f1a465456c63aebf.js",
+    "service-worker.js": "/Drumpad/service-worker.js",
+    "static/css/main.f7042014.chunk.css.map": "/Drumpad/static/css/main.f7042014.chunk.css.map",
+    "static/js/2.efcfc1fa.chunk.js.LICENSE": "/Drumpad/static/js/2.efcfc1fa.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.8c935c80.js",
+    "static/js/runtime-main.7e49beba.js",
     "static/js/2.efcfc1fa.chunk.js",
     "static/css/main.f7042014.chunk.css",
-    "static/js/main.ad81901e.chunk.js"
+    "static/js/main.bdd3d74d.chunk.js"
   ]
 }
