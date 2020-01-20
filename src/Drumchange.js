@@ -28,7 +28,7 @@ class DrumChange extends React.Component {
     document.addEventListener('keydown', this.handlePress)
   }
   componentWillUnmount() {
-    document.removeEventListener('keydown', this.handleKeyDown)
+    document.removeEventListener('keydown')
   }
   handlePress = e => {
 
@@ -36,9 +36,8 @@ class DrumChange extends React.Component {
     if (audio) {
       
       audio.play();
-      console.log(audio.tag)
       audio.currentTime = 0;
-      this.handleDisplay(audio.text)
+      this.handleDisplay(audio.parentElement.id)
     }
   }
 
@@ -57,12 +56,12 @@ class DrumChange extends React.Component {
     console.log(this.arr);
 
     return (
-      <container id='drum-machine' >
+      <div id='drum-machine' >
 
-        <container id='display'>
-          Showing string of playable audio
-          <div>{this.state.display}</div>
-        </container>
+        <div id='display'>
+          <h1>DRUM-MACHINE v.1.0</h1>
+          <div id='state'>{this.state.display}</div>
+        </div>
         <div >
           {data.map((d, index) => <button className='drum-pad'
             id={d.id}
@@ -79,7 +78,7 @@ class DrumChange extends React.Component {
             {d.letter} </button>)}
         </div>
 
-      </container>
+      </div>
     )
   }
 }
